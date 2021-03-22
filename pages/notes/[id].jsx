@@ -1,16 +1,18 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-const Page = () => {
-  const router = useRouter();
-  // params is an array
-  const { params } = router.query;
-  console.log(params);
+export default () => {
+  const router = useRouter()
+  const { id }= router.query
+
   return (
-    <h1>
-      Note
-    </h1>
-  );
-};
+    <div>
+      <h1>Note: {id} </h1>
 
-export default Page;
+      <Link href="/notes">
+        <a>Notes</a>
+      </Link>
+    </div>
+  )
+}
