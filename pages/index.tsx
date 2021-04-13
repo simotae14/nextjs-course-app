@@ -11,4 +11,12 @@ const Home = () => (
   </div>
 );
 
+export function getStaticProps(context) {
+  console.log("context", context);
+  return {
+    props: {}
+  };
+}
+
 export default Home;
+
