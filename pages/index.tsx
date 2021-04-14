@@ -11,8 +11,7 @@ const Home = () => (
   </div>
 );
 
-export function getStaticProps(context) {
-  console.log("context", context);
+export function getStaticProps({params}) {
   return {
     props: {}
   };
