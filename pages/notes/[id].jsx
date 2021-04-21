@@ -16,7 +16,7 @@ const Note = ({ note }) => {
 // note or redirect to the notes page
 export async function getServerSideProps({ params, req, res }) {
   // fetch the data
-  const response = await fetch(`http://localhost:3000/api/note/${params.id}`);
+  const response = await fetch(`${process.env.API_URL}/api/note/${params.id}`);
 
   // redirect if response is not ok
   if (!response.ok) {
